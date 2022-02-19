@@ -105,13 +105,14 @@ starter.
 from map.map import map
 ```
 
-HINT: You'll need to do some processing here.  `SelectField` expects a list of
-**tuples** in the format `(value, text)`, you can use a list of **strings** just note
-that under the hood the selcetfield will use the value of the string as both
-the value and the text.  the tuple comes in handy when you want them to be different.
+HINT: You'll need to do some processing here.  `SelectField` expects either a 
+list of **tuples** in the format `(value, text)` or a list of **strings**. Note 
+that under the hood the `SelectField` will use the value of the string as both 
+the `value` and the `text`, so the tuple comes in handy when you want them to be 
+different.
 
-ALSO NOTE: Any origin can go to any destination.  The value side of the key value pair
-is used for a progression algorithm later in the project.
+ALSO NOTE: Any origin can go to any destination.  The value side of the 
+key-value pair is used for a progression algorithm later in the project.
 
 Import `DataRequired` from `wtforms.validators` and use it to make all fields
 mandatory.
