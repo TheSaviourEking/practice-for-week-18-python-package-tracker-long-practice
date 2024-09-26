@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="{{ url_for('new_package')}}">Shipping Form</a>
+
+    <h1>All Packages</h1>
+    <ul>
+        {% for package in packages %}
+        <li>
+            <p>Id: {{package.id}}</p>
+            <p>Sender: {{package.sender}}</p>
+            <p>Recipient: {{ package.recipient}}</p>
+            <p>Origin: {{package.origin}}</p>
+            <p>Destination: {{package.destination}}</p>
+            <p>Location: {{package.location}}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
